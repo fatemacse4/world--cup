@@ -1,0 +1,60 @@
+/*-----------------
+    Fonts 
+-----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*-------------------------------
+    Common Style or Utilities
+-------------------------------*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    flex-direction: column;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+.blog{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px grey;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+.blog img{
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+.blog a{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #000000;
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 178px;
+    margin-bottom: 15px;
+}
+.blog p{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.blog .blog-info i{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: #2e2d2d;
+}
+.blog .blog-info span{
+    color: #2e2d2d;
+}

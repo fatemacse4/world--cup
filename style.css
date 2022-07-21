@@ -1,0 +1,325 @@
+/*-----------------
+    Fonts 
+-----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*-------------------------------
+    Common Style or Utilities
+-------------------------------*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/*-------------------------------
+    Section Container Style
+-------------------------------*/
+.container{
+    width: 1100px;
+    height: 600px;
+    background: #1d1d1d;
+    border-radius: 25px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
+    padding-top: 22px;
+}
+.half-width{
+    width: 50%;
+    padding-left: 50px;
+}
+.half-width h1{
+    font-size: 60px;
+    font-weight: 700;
+    transition: transform 2s;
+}
+.half-width h1:hover{
+    transform: scale(2);
+}
+.half-width p{
+    padding: 5px 50px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.banner-link-button{
+    text-decoration: none;
+    color: white;
+    background: red;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-left: 50px;
+    transition: transform 2s;
+}
+.banner-link-button:hover{ 
+    width: 200%;
+    transform: scale(2);
+}
+.half-width img{
+    width: 100%;
+    display: block;
+    padding-top: 120px;
+    padding-right: 60px;
+    transition: width 1s,hight 1s,transform 2s;
+}
+.half-width img:hover{
+    transform: rotate(360deg);
+    width: 200%;
+    height: auto;
+}
+
+/*-------------------------------
+    Article Sidebar Style
+-------------------------------*/
+.sidebar{
+    width: 270px;
+    height: 275px;
+    background: #1d1d1d;
+    border: 1px solid #1d1d1d;
+    border-radius: 10px;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.sidebar-link-button a{
+    text-decoration: none;
+    background: #ffffff;
+    color: #1d1d1d;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.sidebar-link-button a:hover{
+    background: #ff0000;
+    color: #ffffff;
+}
+/*-------------------------------
+    Article Blog Style
+-------------------------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    flex-direction: column;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+.blog{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px grey;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+.blog img{
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+.blog a{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #000000;
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 178px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.blog p{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.blog .blog-info i{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: #605e5e;
+}
+.blog .blog-info span{
+    color: #605e5e;
+    font-size: 14px;
+    font-weight: 400;
+}
+/*----------------------
+    Visibility 
+----------------------*/
+
+.view-all{
+    visibility: hidden;
+}
+
+/*----------------------
+    Footer 
+----------------------*/
+footer{
+    width: 100%;
+    height: 450px;
+    background: #1d1d1d;
+    margin-top: 100px;
+}
+.footer-title{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 35px;
+}
+hr{
+    border: 1px solid grey;
+    margin-bottom: 40px;
+}
+.footer-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-link a{
+    text-decoration: none;
+    text-align: center;
+    color: grey;
+    font-size: 15px;
+    margin-left: 40px;
+}
+.footer-link a:hover{
+    border-bottom: 1px solid grey;
+}
+.social-link a{
+    text-decoration: none;
+    text-align: center;
+    color: grey;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+/*----------------------
+    Media Queries 
+----------------------*/
+
+/*----------------------
+    Mobile Device
+--------------------- */
+@media only screen and (max-width:688px) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 1200px;
+        border-radius: 25px;
+    }
+    .aside{
+        background: #ffffff;
+        border: none;
+    }
+    .sidebar-link a{
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .blog{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer{
+        height: 800px;
+        background: #1d1d1d;
+    }
+    .footer-link ul a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .social-link a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        font-size: 25px;
+    }
+    .view-all{
+        visibility: hidden;
+    }
+}
+
+/*----------------------
+    Tablet Devices
+--------------------- */
+
+@media only screen and (min-width:689px) and (max-width:992px){
+    .main{
+        width: 100%;
+    }
+    .container, .blogs{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .container, .blogs, .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aside{
+        background: none;
+        border: none;
+    }
+    .sidebar-link a{
+        text-decoration: none;
+        text-align: center;
+        background: #ffffff;
+        color: #000000;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .view-all{
+        text-decoration: none;
+        text-align: center;
+        background: #ff0000;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        visibility: visible;
+    }
+    .footer{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+}
